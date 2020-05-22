@@ -1,0 +1,44 @@
+#include <cstdlib> //for rand
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+const int LISTLEN = 15;
+
+void BubbleSort (int SortArray[], int NumElements);
+
+void main()
+{
+int List[LISTLEN];
+
+/*CREATE lIST */
+for(int i=0; i< LISTLEN; i++) List[i]=rand()%LISTLEN;
+
+cout<<"UNSORTED LIST: ";
+for (int i=0; i<LISTLEN; i++) cout << setw(3) << List[i];
+
+BubbleSort(List, LISTLEN);
+
+cout << "\n SORTED LIST: ";
+for (int i=0; i<LISTLEN; i++) cout << setw(3) << List[i];
+
+cout<< endl;
+system("pause");
+} /*end main*/
+
+void BubbleSort(int SortArray[], int NumElements)
+{
+    int i,j,Temp;
+    for(i=NumElements-1; i >= 0; i--)
+    {
+        for (j=0; i<i; j++)
+        {
+            if(SortArray[j]>SortArray[j+1])
+            {
+                    Temp=SortArray[j];
+                    SortArray[j]=SortArray[j+1];
+                    SortArray[j+1]=Temp;
+            } // end if
+        } // end for j
+    } // end for i
+}
