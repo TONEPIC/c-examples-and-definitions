@@ -1,6 +1,6 @@
 #include <iostream>
 #include <iomanip>
-#include <iostream>
+
 
 using namespace std;
 
@@ -11,7 +11,7 @@ int main()
 
 	int num =3; // a simple variable holding value 3
 	int *pNum = &num;// a pointer holdingthe address of num
-	int &ref1Num = num; // 
+	int &refNum = num; // 
 
 	cout << pNum << endl;
 	
